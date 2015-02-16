@@ -32,6 +32,9 @@ We use GitHub:Issues for tracking issues with this module. You can report new is
 
 The code in this library is heavily influenced, and at some occasion even directly copied, from [Jeff Jahr's dcled](http://www.last-outpost.com/~malakai/dcled/) program.
 
+Travis CI : [![Build Status](https://secure.travis-ci.org/ullgren/dcmsgboard4j.png)](http://travis-ci.org/ullgren/dcmsgboard4j)
+
+
 
 
 
