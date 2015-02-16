@@ -2,8 +2,8 @@ package com.ullgren.dcmsgboard4j;
 
 public class ScrollingTextMessage extends TextMessage {
 	
-	private byte currentOffset = 0;
-	private byte stepOffset = 1;
+	private int currentOffset = 0;
+	private int stepOffset = 1;
 
 	public ScrollingTextMessage(String text) {
 		this(text, new Font1());
@@ -26,7 +26,7 @@ public class ScrollingTextMessage extends TextMessage {
 	@Override
 	public boolean get(int x, int y) {
 		int realX = x+currentOffset-Board.SIZE_X;
-		if ( realX < 0 || realX >=  Board.SIZE_X ) {
+		if ( realX < 0 || realX >= this.ledMessage.length ) {
 			return false;
 		} else {
 			return this.ledMessage[realX][y];

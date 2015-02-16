@@ -11,7 +11,7 @@ public class TextMessage implements Message, Screen {
 	}
 	
 	public TextMessage(String text, Font font) {
-		this.ledMessage = new boolean[Board.SIZE_X][Board.SIZE_Y];
+		this.ledMessage = new boolean[text.length()*font.getDispwidth()][Board.SIZE_Y];
 		this.font = font;
 		for(int i = 0; i<text.length();i++) {
 			addChar(text.charAt(i), i*font.getDispwidth());
@@ -27,7 +27,7 @@ public class TextMessage implements Message, Screen {
 		int cx,x,y;
 
 		for(y=0;y<(this.font.getDispheight());y++) {
-			for (cx=0,x=xloc;x<Board.SIZE_X && cx<=(this.font.getDispwidth());cx++,x++) {
+			for (cx=0,x=xloc; x < this.ledMessage.length && cx<=(this.font.getDispwidth());cx++,x++) {
 				byte[] entry = this.font.getData()[(int)c];
 				this.ledMessage[x][y] = ((entry[y] & (1<<cx))!=0)?  true:this.ledMessage[x][y];
 			}
