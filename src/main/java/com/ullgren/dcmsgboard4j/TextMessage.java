@@ -7,7 +7,7 @@ public class TextMessage implements Message, Screen {
 	
 
 	public TextMessage(String text) {
-		this(text, new Font2());
+		this(text, new Font1());
 	}
 	
 	public TextMessage(String text, Font font) {
