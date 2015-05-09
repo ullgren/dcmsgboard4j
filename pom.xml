@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.ullgren</groupId>
   <artifactId>dcmsgboard4j</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <packaging>jar</packaging>
   <name>Dream Cheeky USB Message Board for Java library</name>
   <properties>
@@ -20,13 +20,18 @@
       <developerConnection>scm:git@github.com:ullgren/dcmsgboard4j.git</developerConnection>
       <url>http://github.com/ullgren/dcmsgboard4j</url>
   </scm>
+  <repositories>
+       <repository>
+           <id>bintray-ullgren-maven</id>
+           <name>bintray</name>
+           <url>http://dl.bintray.com/ullgren/maven</url>
+       </repository>
+  </repositories>
   <dependencies>
     <dependency>
-      <groupId>ch.ntb</groupId>  
-      <artifactId>usb</artifactId>  
-      <version>0.5.9</version> 
-      <scope>system</scope>
-      <systemPath>${project.basedir}/lib/ch.ntb.usb-0.5.9.jar</systemPath>
+      <groupId>com.ullgren.pontus.libusbjava</groupId>  
+      <artifactId>usb</artifactId>
+      <version>0.5.9</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
@@ -81,3 +86,4 @@
     </plugins>
   </build>
 </project>
+
