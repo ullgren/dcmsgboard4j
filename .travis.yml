@@ -8,5 +8,4 @@ cache:
 
 install: /bin/true
 script:
-  - mvn clean install -B --settings .mvntravissettings.xml && mvn clean cobertura:cobertura coveralls:report
-
+  - mvn clean install -B --settings .mvntravissettings.xml
